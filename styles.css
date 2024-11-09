@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --color-1: rgb(7, 66, 113);
+    --color-2: rgb(176, 144, 110);
+    --color-3: rgb(232, 233, 235);
+    --color-4: rgb(85, 82, 61);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Open Sans", serif;
+    font-size: 12px;
+    background-color: var(--color-3);
+}
+
+
+.shipping-nav {
+    text-align: center;
+    background-color: var(--color-1);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 3rem 0.2rem 3rem;
+}
+
+
+
+.nav-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-info p:hover {
+    text-decoration: underline;
+}
+
+
+
+.nav-info p span {
+    transform: scale(0.8) translateX(1rem) translateY(0.2rem);
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    padding: 4rem;  
+    height: 80%;
+}
+
+
+header {
+    position: relative;
+    z-index: 100;
+}
+
+
+
+ul li:first-child {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin-top: -2rem ;
+
+    
+}
+
+.logo {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;  
+}
+
+.material-symbols-outlined {
+    color: white;
+}
+
+#logo-list .logo-ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+#logo-list .logo-ul li:hover {
+    cursor: pointer;
+}
+
+
+
+#logo-list .logo-ul li {
+    color: white;
+}
+
+#logo-list .logo-ul li:nth-child(2),
+#logo-list .logo-ul li:nth-child(3),
+#logo-list .logo-ul li:nth-child(4),
+#logo-list .logo-ul li:nth-child(5) {
+    position: relative;
+    right: 25%;
+    font-weight: 660;
+    font-size: 13px;
+}
+
+.active-tab {
+    padding: 1rem;
+    background-color: var(--color-1);
+}
+
+
+
+
+
+/* shopping cart modal styling*/
+.hidden {
+    display: none;
+}
+
+.modal-cart {
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 100vh;
+   width: 20vw;
+   background-color: white;
+   z-index: 6;
+   transform: translateY(32.3px); 
+}
+
+
+/* shopping cart slide in animation */
+.fadeOut {
+    animation: cartFadeOut 0.2s ease;
+}
+
+.fadeIn {
+    animation: cartFadeIn 0.2s ease;
+}
+
+@keyframes cartFadeIn {
+    0% {width: 0};
+    100% {width: 20vw;}
+}
+
+@keyframes cartFadeOut {
+    100% {width: 0};
+    0% {width: 20vw;}
+}
+
+
+
+.modal-title-cart-wrapper {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 17px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.modal-title-cart-wrapper div {
+   color: white;
+   transform: scale(2);
+    
+}
+
+.modal-title-cart-wrapper div:hover {
+    cursor: pointer;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
+
+
+  /* hero section styling */
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.hero-img {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: right center ;
+  
+}
+
+
+.hero-text-container {
+    position: absolute;
+    left: 60%;
+    bottom: 30%;
+    top: 50%;
+    text-align: center;
+    color: white;
+}
+
+.hero-text-container h2 {
+    font-size: 30px;
+    white-space: nowrap;
+    /* margin-bottom: 2rem; */
+}
+
+.hero-text-container p {
+    font-size: 16px;
+}
+
+.hero-text-container button {
+    margin-top: 3rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    background-color: var(--color-1);
+    color: white;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 10px 18px 2px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px;
+}
+
+.hero-text-container button a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-text-container button a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+
+.logo-ul li:nth-child(2):hover,
+.logo-ul li:nth-child(3):hover,
+.logo-ul li:nth-child(4):hover,
+.logo-ul li:nth-child(5):hover {
+    opacity: 85%;
+}
+
+
+
+/* main section styling */
+main {
+    position: absolute;
+    top: 600px;
+    width: 100%;
+    height: 100vh;
+    margin-top: 10rem;
+}
+
+.alternating-cards {
+    padding-top: 7rem;
+    padding-left: 9rem;
+    padding-bottom: 9rem;
+    background-color: white;
+}
+
+.left-card-wrapper {
+    height: 50rem;
+    width: 100rem;
+    margin-bottom: 15rem;
+}
+
+.left-card-wrapper img {
+    object-fit: cover;
+    object-position: bottom center;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-3rem);
+
+}
+
+.mutliple-card-container{
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+    left: 65%;
+    width: 550px;
+    height: 350px;
+}
+
+.left-bottom-card {
+    position: absolute;
+    z-index: -1;
+    background-color: var(--color-1);
+    width: 95%;
+    height: 100%;
+
+}
+
+.left-middle-card {
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+    right: 15%;
+    width: 95%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 10px 18px -2px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    display: grid;
+    place-content: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.left-middle-card h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 30px;
+    color: var(--color-1);
+    
+}
+
+.left-middle-card p:first-child {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-2);
+}
+
+.left-middle-card p:not(.left-middle-card p:first-child) {
+    opacity: 50%;
+}
+
+.left-middle-card-msg {
+    margin-bottom: 3rem;
+}
+
+.left-top-card {
+    position: absolute;
+    width: 96%;
+    height: 98%;
+    z-index: 3;
+    top: 8%;
+    right: 8%;
+    border: 1px solid rgba(176, 143, 110, 0.5);
+    display: grid;
+    place-content: center;
+}
+
+.left-top-card button {
+    background-color: var(--color-1);
+    opacity: 100%;
+    position: absolute;
+    top: 80%;
+    right: 42%;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.left-top-card button a{
+    color: white;
+    text-decoration: none;
+   
+}
+
+.left-top-card button:hover {
+    opacity: 90%;
+}
+
+
+/* right-card styling */
+
+
+.right-card-wrapper {
+    height: 50rem;
+    width: 100rem;
+}
+
+.right-card-wrapper img {
+    object-fit: cover;
+    object-position: 5px 65%;
+    width: 100%;
+    height: 100%;
+    transform: translateX(25%);
+}
+
+.right-mutliple-card-container {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 5%;
+    width: 550px;
+    height: 350px;
+}
+
+.right-bottom-card {
+    position: absolute;
+    z-index: -1;
+    background-color: var(--color-4);
+    width: 95%;
+    height: 100%;
+
+}
+
+.right-middle-card {
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+    left: 15%;
+    width: 95%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 10px 18px -2px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    display: grid;
+    place-content: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.right-middle-card h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 30px;
+    color: var(--color-4);
+    
+}
+
+.right-middle-card p:first-child {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-2);
+}
+
+.right-middle-card p:not(.right-middle-card p:first-child) {
+    opacity: 50%;
+}
+
+.right-middle-card-msg {
+    margin-bottom: 3rem;
+}
+
+
+.right-top-card {
+    position: absolute;
+    width: 96%;
+    height: 98%;
+    z-index: 3;
+    top: 8%;
+    left: 8%;
+    border: 1px solid rgba(176, 143, 110, 0.5);
+    display: grid;
+    place-content: center;
+}
+
+.right-top-card button {
+    background-color: var(--color-4);
+    opacity: 100%;
+    position: absolute;
+    top: 80%;
+    left: 42%;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.right-top-card button a{
+    color: white;
+    text-decoration: none;
+   
+}
+
+.right-top-card button:hover {
+    opacity: 90%;
+}
+
+
+/* section "why popped perfection?" styling */
+.reasons-to-shop-content-wrapper {
+    display: grid;
+    grid-template-rows:  1fr 1fr; 
+    width: 100%;
+   
+}
+
+.reasons-title-wrapper {
+    margin: 0 auto;
+}
+
+.reasons-text-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media(width <= 1100px) {
+    .modal-cart {
+        width: 30vw;
+    }
+  }
