@@ -25,12 +25,6 @@ closeCartModal.addEventListener('click', function() {
          overlay.classList.add('hidden');
          logoList.style.display = 'block';
     }, 200)
-
-
-
-
-   
-
  
 
 })
