@@ -79,6 +79,10 @@ ul li:first-child {
     
 }
 
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
+
 .logo {
     width: 300px;
     height: 200px;
@@ -99,6 +103,20 @@ ul li:first-child {
     cursor: pointer;
 }
 
+#products-page-link {
+    text-decoration: none;
+    color: white;
+}
+
+#products-page-link:visited {
+    color:white;
+    text-decoration: none;
+}
+
+#products-page-link:active {
+    color:white;
+    text-decoration: none;
+}
 
 
 #logo-list .logo-ul li {

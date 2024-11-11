@@ -1,0 +1,15 @@
+[
+    {
+        "productName": "Classic Caramel",
+        "productDesc": "Indulge in the timeless, buttery sweetness of caramel-coated popcorn, creating a perfect balance of rich flavor and satisfying crunch",
+        "photoSrc": ["images/caramel-product-1.png", "images/caramel-product-2.png"]
+    },
+    {
+        "productName": "Cheddar Bacon Ranch Popcorn",
+        "productDesc": "A savory blend of sharp cheddar cheese, crispy bacon, and zesty ranch seasoning, making every bite irresistibly delicious",
+        "photoSrc": ["images/caramel-product-1.png", "images/caramel-product-2.png"]
+    }
+]
+
+
+
