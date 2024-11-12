@@ -4,6 +4,7 @@ const overlay = document.querySelector('.overlay');
 const logoList =  document.getElementById('logo-list');
 const closeCartModal = document.querySelector('.close-modal');
 const logo = document.querySelector('.logo');
+const exampleSpan = document.getElementById('example-span');
 
 
 cartIcon.addEventListener('click', function() {
@@ -36,7 +37,7 @@ cartIcon.addEventListener('click', function() {
 })
 
 //Output JSON Data API
-const productsJSON = "data.json";
+const productsJSON = "products.json";
 
 fetch(productsJSON)
 .then((response) => {
@@ -46,7 +47,11 @@ fetch(productsJSON)
     const allProducts = new Map(data.map(product => [product.productName, product])) 
     
     const caramel = allProducts.get("Classic Caramel");
-    console.log(caramel);
+
+
+    exampleSpan.textContent = caramel.productName;
+
+    console.log(caramel.imgSrc);
 
 })
 
