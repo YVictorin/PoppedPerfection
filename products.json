@@ -1,61 +1,73 @@
 [
     {
         "productName": "Classic Caramel",
+        "price": 9.99,
         "productDesc": "Indulge in the timeless, buttery sweetness of caramel-coated popcorn, creating a perfect balance of rich flavor and satisfying crunch.",
         "imgSrc": ["images/Caramel-product-1.png", "images/Caramel-product-2.png"]
     },
     {
         "productName": "Cheddar Bacon Ranch Popcorn",
+        "price": 9.99,
         "productDesc": "A savory blend of sharp cheddar cheese, crispy bacon, and zesty ranch seasoning, making every bite irresistibly delicious.",
         "imgSrc": ["images/Bacon-product-1.png", "images/Bacon-product-2.png"]
     },
     {
         "productName": "S'mores Popcorn",
+        "price": 9.99,
         "productDesc": "Enjoy the perfect combination of chocolate, gooey marshmallows, and crunchy graham crackers with this sweet, nostalgic s'mores-inspired popcorn.",
         "imgSrc": ["images/Smores-product-1.png", "images/Smores-product-2.png"]
     },
     {
         "productName": "Buffalo Wing Popcorn",
+        "price": 9.99,
         "productDesc": "Packed with spicy buffalo sauce and a sprinkle of blue cheese, this popcorn brings the bold flavors of a classic wing in every bite.",
         "imgSrc": ["images/Buffalo-product-1.png", "images/Buffalo-product-2.png"]
     },
     {
         "productName": "Chocolate Peanut Butter Popcorn",
+        "price": 9.99,
         "productDesc": "Satisfy your sweet tooth with the rich, creamy pairing of chocolate and peanut butter on perfectly popped popcorn.",
         "imgSrc": ["images/PeanutButter-product-1.png", "images/PeanutButter-product-2.png"]
     },
     {
         "productName": "Cinnamon Baked Apple Popcorn",
+        "price": 9.99,
         "productDesc": "A warm, comforting blend of cinnamon and apple-flavored popcorn that captures the essence of a delicious baked apple treat.",
         "imgSrc": ["images/CinnamonApple-product-1.png", "images/CinnamonApple-product-2.png"]
     },
     {
         "productName": "Maple French Toast Popcorn",
+        "price": 9.99,
         "productDesc": "Indulge in the sweet, syrupy goodness of maple and cinnamon with popcorn that tastes just like freshly made French toast.",
         "imgSrc": ["images/MapleFrench-product-1.png", "images/MapleFrench-product-2.png"]
     },
     {
         "productName": "Mango Chili Lime Popcorn",
+        "price": 9.99,
         "productDesc": "A vibrant, tangy twist of sweet mango, spicy chili, and refreshing lime makes this popcorn a tropical flavor explosion.",
         "imgSrc": ["images/MangoChili-product-1.png", "images/MangoChili-product-2.png"]
     },
     {
         "productName": "Tiramisu Popcorn",
+        "price": 9.99,
         "productDesc": "A luxurious blend of coffee, chocolate, and cream, this popcorn captures the decadent flavor of the classic Italian dessert.",
         "imgSrc": ["images/Tiramisu-product-1.png", "images/Tiramisu-product-2.png"]
     },
     {
         "productName": "Peanut Butter & Jelly Popcorn",
+        "price": 9.99,
         "productDesc": "A nostalgic, sweet and savory treat that combines creamy peanut butter with sweet jelly on fluffy popcorn for a perfect snack.",
         "imgSrc": ["images/PBJ-product-1.png", "images/PBJ-product-2.png"]
     },
     {
         "productName": "Garlic Parmesan Truffle Popcorn",
+        "price": 9.99,
         "productDesc": "Elevate your snacking experience with rich, savory garlic, Parmesan cheese, and a hint of truffle, all coating perfectly popped kernels.",
         "imgSrc": ["images/Garlic-product-1.png", "images/Garlic-product-2.png"]
     },
     {
         "productName": "Strawberry Shortcake Popcorn",
+        "price": 9.99,
         "productDesc": "A sweet, fruity treat with strawberry glaze and crumbled shortcake pieces that bring the delicious flavor of strawberry shortcake to every bite of popcorn.",
         "imgSrc": ["images/Shortcake-product-1.png", "images/Shortcake-product-2.png"]
     }

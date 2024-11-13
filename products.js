@@ -6,6 +6,9 @@ const closeCartModal = document.querySelector('.close-modal');
 const logo = document.querySelector('.logo');
 const exampleSpan = document.getElementById('example-span');
 
+const productGridElem = document.querySelector('.product-grid');
+
+
 
 cartIcon.addEventListener('click', function() {
     cartModal.classList.remove('hidden');
@@ -36,27 +39,78 @@ cartIcon.addEventListener('click', function() {
     
 })
 
-//Output JSON Data API
-const productsJSON = "products.json";
+//Getting the product data from the json file
+async function getProductData() {
+    try {
+        const response = await fetch('products.json');
+        const productsJson = await response.json();
+        const allProducts = new Map(productsJson.map(product => [product.productName, product])) 
+        // const caramel = allProducts.get("Classic Caramel");
+        setupProductGrid(allProducts);
+    } catch(err) {
+        console.log(err);
+    } 
+}
 
-fetch(productsJSON)
-.then((response) => {
-    return response.json();
-})
-.then((data) => {
-    const allProducts = new Map(data.map(product => [product.productName, product])) 
+
+
+
+function setupProductGrid(arr) {
+    arr.forEach((product) => {
+        const productsDiv = document.createElement('div');
+        productGridElem.appendChild(productsDiv);
+        productsDiv.style.backgroundImage = `url(${product.imgSrc[0]})`;
+
+        //styling to all the elements in the product grid
+        productsDiv.style.backgroundSize = 'contain';
+        productsDiv.style.backgroundRepeat = 'no-repeat';
+        productsDiv.style.transition = 'all 0.3s ease';
+        productsDiv.style.display = 'flex';
+        productsDiv.style.justifyContent = 'center';
+        productsDiv.style.alignContent = 'center';
+        productsDiv.style.position = 'relative';
+
+
+
+        productsDiv.addEventListener('mouseover', function() {
+            productsDiv.style.backgroundImage = `url(${product.imgSrc[1]})`;
+          
+        })
+
+        productsDiv.addEventListener('mouseleave', function() {
+            productsDiv.style.backgroundImage = `url(${product.imgSrc[0]})`;
     
-    const caramel = allProducts.get("Classic Caramel");
+        })
 
 
-    exampleSpan.textContent = caramel.productName;
+        let productNameSpan = document.createElement('span');
+        productNameSpan.textContent = product.productName;
 
-    console.log(caramel.imgSrc);
+        let productDescSpan = document.createElement('span');  //todo make this actually the desc and truncate it 
+        productDescSpan.textContent = 'Gourmet Popcorn';
 
-})
+        let productPriceSpan = document.createElement('span');
+        productPriceSpan.textContent = product.price;
+
+        let productInfoContainer = document.createElement('div');
+
+        productInfoContainer.appendChild(productNameSpan);
+        productInfoContainer.appendChild(productDescSpan);
+        productInfoContainer.appendChild(productPriceSpan);
+
+        productsDiv.appendChild(productInfoContainer);
 
 
 
+
+
+    })
+
+  
+}
+
+
+getProductData();
 
 
 

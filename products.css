@@ -243,9 +243,9 @@ a, a:hover, a:active, a:visited, a:focus {
   /* Product Grid styling */
   main { 
     position: absolute;
-    top: 600px;
-    left: 300px;
-    right: 300px;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 50%);
     width: 70%;
     height: 100vh;
   }
@@ -261,7 +261,7 @@ a, a:hover, a:active, a:visited, a:focus {
   }
 
   /* need to do this in from json in js */
-  .example { 
+  /* .example { 
     background-image: url("images/Caramel-product-1.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -270,9 +270,8 @@ a, a:hover, a:active, a:visited, a:focus {
     justify-content: center;
     align-items: center;
     position: relative;
-
-    
   }
+
 
   .example:hover {
     background-image: url("images/Caramel-product-2.png");
@@ -292,6 +291,98 @@ a, a:hover, a:active, a:visited, a:focus {
     font-size: 16px;
     font-weight: 600;
   }
+ */
+
+ .product-grid div {
+    transform: scale(0.8);
+ }
+
+ .product-grid div:nth-child(1) {
+    transform: scale(0.9);
+ }
+
+ .product-grid div:nth-child(3) {
+    transform: scale(0.72);
+ }
+
+ .product-grid div:nth-child(4) {
+    transform: scale(0.93);
+ }
+
+ .product-grid div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -32rem;
+    width: 30rem;
+    height: 17rem;
+    flex-direction: column;
+ }
+
+ /* slight styling adjustments to the products text and images */
+ .product-grid div div span:nth-child(1) {
+    font-size: 20px;
+    font-weight: 600;
+ }
+
+  /* the price */
+ .product-grid div div span:nth-child(3)::before {
+    content: '$';
+ }
+
+ .product-grid div div span:nth-child(3) {
+    font-size: 20px;
+    opacity: 0.5;
+ }
+
+ .product-grid div div span:nth-child(3){
+    margin-top: 1rem;
+ }
+
+ /* caramel popcorn */
+ .product-grid div:nth-child(1) div span {
+    position: relative;
+    top: -2.2rem;
+ }
+
+ .product-grid div:nth-child(1) div span:nth-child(1) {
+    font-size: 18px;
+ }
+
+ .product-grid div:nth-child(1) div span:nth-child(2) {
+    font-size: 11px;
+ }
+
+ /* smores popcorn */
+ .product-grid div:nth-child(3) div span {
+    position: relative;
+    bottom: -2.2rem;
+ }
+
+ .product-grid div:nth-child(3) div span:nth-child(1) {
+    font-size: 22px;
+ }
+
+ .product-grid div:nth-child(3) div span:nth-child(2) {
+    font-size: 13px;
+ }
+
+
+ /* buffalo wing popcorn */
+ .product-grid div:nth-child(4) div span {
+    position: relative;
+    top: -2.5rem;
+ }
+
+ .product-grid div:nth-child(4) div span:nth-child(1) {
+   font-size: large;
+ }
+
+ .product-grid div:nth-child(4) div span:nth-child(2) {
+    font-size: 10px;
+  }
+ 
 
 
 
