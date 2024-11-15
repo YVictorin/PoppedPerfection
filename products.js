@@ -45,7 +45,11 @@ async function getProductData() {
         const response = await fetch('products.json');
         const productsJson = await response.json();
         const allProducts = new Map(productsJson.map(product => [product.productName, product])) 
-        // const caramel = allProducts.get("Classic Caramel");
+      
+    //     productsJson.forEach(function(product) {
+    //     console.log(product.productDesc);
+    //    })
+
         setupProductGrid(allProducts);
     } catch(err) {
         console.log(err);

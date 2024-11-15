@@ -79,6 +79,11 @@ ul li:first-child {
     
 }
 
+.logo-ul li a {
+    color: white
+}
+
+
 a, a:hover, a:active, a:visited, a:focus {
     text-decoration:none;
 }
