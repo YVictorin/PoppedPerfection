@@ -29,10 +29,23 @@ closeCartModal.addEventListener('click', function() {
 
 })
 
+overlay.addEventListener('click', function() {
+    cartModal.classList.remove('fadeIn');
+    cartModal.classList.add('fadeOut');
+
+
+    setTimeout(() => {
+         cartModal.classList.add('hidden');
+         overlay.classList.add('hidden');
+         logoList.style.display = 'block';
+    }, 200)
+ 
+})
+
+
 cartIcon.addEventListener('click', function() {
 
     cartModal.classList.remove('hidden');
     cartModal.classList.add('fadeIn');
     
 })
-

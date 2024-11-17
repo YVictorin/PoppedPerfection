@@ -5,6 +5,7 @@
     --color-2: rgb(176, 144, 110);
     --color-3: rgb(232, 233, 235);
     --color-4: rgb(85, 82, 61);
+    /* --vh: 1vh; */
 }
 
 *, *::before, *::after {
@@ -217,7 +218,7 @@ a, a:hover, a:active, a:visited, a:focus {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 550vh;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(3px);
     z-index: 5;
@@ -732,13 +733,673 @@ footer {
     transform: scale(1) rotate(45deg);
  }
  
+.left-side-nav {
+    display: none;
+}
+
+.footer-info.mobile {
+    display: none;
+}
 
 
 
-
-/* responsiveness for phones */
-  @media(width <= 1100px) {
+/* slight changes for certain desktop sizes */
+  @media (width <= 1100px) {
     .modal-cart {
         width: 30vw;
     }
+  }
+
+  @media (width >= 1100px) {
+    .white-space {
+        padding-bottom: 35rem;
+       }
+  }
+
+ 
+  /* responsiveness for large tablets */
+  @media (max-width: 1024px) {
+    .footer-about, .footer-shop, .footer-contact {
+     display: none;
+    }
+
+     /* navbar and hero image styling for mobile */
+     .shipping-nav {
+        text-align: center;
+        background-color: var(--color-1);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2rem 3rem 0.2rem 3rem;
+    }
+    
+    
+    
+    .nav-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .nav-info p:hover {
+        text-decoration: underline;
+    }
+    
+    
+    
+    .nav-info p span {
+        transform: scale(0.8) translateX(1rem) translateY(0.2rem);
+    }
+    
+    nav ul {
+        position: relative;
+        display: flex;
+        justify-content: right;
+        gap: 1rem;
+        padding: 4rem;  
+        height: 80%;
+    }
+    
+    
+    header {
+        position: relative;
+        z-index: 100;
+    }
+    
+    
+    
+    ul li:first-child {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        margin-top: -2rem ;
+    
+        
+    }
+    
+    .logo-ul li a {
+        color: white
+    }
+    
+    
+    a, a:hover, a:active, a:visited, a:focus {
+        text-decoration:none;
+    }
+    
+    .logo {
+        width: 300px;
+        height: 200px;
+        object-fit: contain;  
+    }
+    
+    .material-symbols-outlined {
+        color: white;
+    }
+    
+    #logo-list .logo-ul {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+    #logo-list .logo-ul li:hover {
+        cursor: pointer;
+    }
+    
+    #products-page-link {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #products-page-link:visited {
+        color:white;
+        text-decoration: none;
+    }
+    
+    #products-page-link:active {
+        color:white;
+        text-decoration: none;
+    }
+    
+    
+    #logo-list .logo-ul li {
+        color: white;
+    }
+    
+    #logo-list .logo-ul li:nth-child(2),
+    #logo-list .logo-ul li:nth-child(3),
+    #logo-list .logo-ul li:nth-child(4),
+    #logo-list .logo-ul li:nth-child(5) {
+        position: relative;
+        right: 25%;
+        font-weight: 660;
+        font-size: 13px;
+    }
+    
+    .active-tab {
+        padding: 1rem;
+        background-color: var(--color-1);
+    }
+    
+
+   
+
+
+
+    .shipping-nav {
+        white-space: nowrap;
+        font-size: 5px;
+    }
+
+    .shipping-nav .nav-info span {
+        transform: scale(0.7);
+    }
+    .logo-ul {
+        width: 100vw;
+        margin-left: 1rem;
+    }
+
+   
+
+    .logo-ul li a, .logo-ul li {
+    transform: translate(3rem);
+    }
+
+    .nav-info {
+        font-size: 0.5rem;
+    }
+
+    .shipping-nav {
+        font-size: 0.5rem;
+    }
+
+    .logo {
+       transform: translateX(-42rem) scale(0.5);
+    }
+
+    #search-icon, #cart-icon, #menu-icon {
+        transform: translate(-2rem);
+    }
+
+    .hero-img {
+        height: 100vh;
+    }
+
+
+
+    /* reasons to shop tablet responsivness */
+    .hero-text-container {
+        display: none;
+    }
+
+    .reasons-popcorn-img-container,
+    .reasons-candy-img-container , .white-space {
+        display: none;
+    }
+
+    footer {
+        position: absolute;
+        top: 250vh;
+        height: 10vh;
+        padding-bottom: 100rem;
+    }
+
+    .footer-content-wrapper {
+        margin-left: 15rem;
+    }
+    .small-text:not(.small-text:first-child) {
+        position: relative;
+        top: 54vh;
+    }
+    .footer-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+    
+    }
+
+    .footer-logo-icons {
+        transform: translate(-6rem, 3rem) scale(0.8);
+    }
+
+    #first-popcorn, #second-popcorn, #third-popcorn  {
+        display: none;
+    }
+
+    .small-text {
+        position: relative;
+        top: calc(100vh - 30rem);
+        text-align: center;
+    }
+
+    .footer-info-wrapper{
+        transform: translateY(-30rem);
+        display: none;
+    }
+
+    .footer-info.mobile {
+        margin-top: 3rem ;
+        margin-left: 1rem;
+    }
+
+    .footer-img {
+        bottom: -20%;
+    }
+
+    .footer-info.mobile {
+        width: 95%;
+        height: 10rem;
+        position: absolute;
+        left: 0;
+        top: 25%;
+        display: grid;
+        place-content: center;
+        height: 50vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 5rem;
+    }
+    
+
+    .footer-shop.mobile {
+        border-top: 1px solid var(--color-2);
+        position: relative;
+
+    }
+
+    .footer-help-container p {
+        margin-bottom: 4rem;
+    }
+
+    .footer-info.mobile div  {
+        width: 90vw;
+        border-bottom: 1px solid var(--color-2);
+        color: var(--color-2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-info.mobile span {
+       transform: scale(2);
+       font-weight: 700;
+       margin: 1rem;
+    }
+
+  
+
+
+    .footer-info.mobile img {
+        width: 100%;
+        height: 100%;
+        top: 80vh;
+        left: 0;
+    }
+
+
+
+   /* cards on tablets */
+  .right-card-wrapper {
+    position: relative;
+    right: 35rem;
+    width: 99vw;
+  }
+
+  .right-mutliple-card-container {
+    position: relative;
+    top: -20rem;
+    left: 70vw;
+  }
+    
+  .alternating-cards{
+    height: 1800px;
+    padding-bottom: 10rem;
+  }
+
+ }
+
+  /* responsiveness for mobile and small tablets */
+ @media (max-width: 500px), (max-width: 769px)  {
+    body, html {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+        min-height: -webkit-fill-available; /*makes vh units actually work on mobile*/
+
+    }
+
+     /* navbar and hero image styling for mobile */
+     .hero-img {
+        width: 100vw;
+    }
+
+    #logo-list {
+        transform: scale(0.5) translate(-50%, -50%);
+        position: relative;
+        top: 50%;
+        left: 50%;
+    }
+
+
+
+    .shipping-nav {
+        white-space: nowrap;
+        font-size: 5px;
+    }
+
+    .shipping-nav .nav-info span {
+        transform: scale(0.7);
+    }
+    .logo-ul {
+        width: 100vw;
+        margin-left: 1rem;
+    }
+
+   
+
+    .logo-ul li a, .logo-ul li {
+    transform: translate(3rem);
+    }
+
+    .nav-info {
+        font-size: 0.5rem;
+    }
+
+    .shipping-nav {
+        font-size: 0.5rem;
+    }
+
+    .logo {
+       transform: translateX(-42rem) scale(0.5);
+    }
+
+    #search-icon, #cart-icon, #menu-icon {
+        transform: translate(-2rem);
+    }
+
+    .hero-img {
+        height: 100vh;
+    }
+
+    .hero-text-container h2, .hero-text-container p, .hero-text-container button {
+        position: relative;    
+        right: calc(100vw - 75vw);
+        top: calc(100vh - 122vh);
+        font-size: 15px;
+    }
+
+    .modal-cart {
+        height: 500vh;
+        width: 100vw;
+        position: relative;
+        top: -12%;
+        left: 35%
+    }
+
+    .modal-cart .close-modal {
+        position: relative;
+         width: 100px;
+        bottom: 8rem;
+        transform: translateX(-5rem);
+    } 
+
+    /* changing the layout for the cards section */
+    /* left card */
+
+   .alternating-cards {
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        
+   }
+
+   .left-card-wrapper  {
+    position: absolute;
+    left: 0;
+    width: 110vw;
+    height: 40%;
+   
+
+   }
+
+   .left-card-wrapper {
+    white-space: nowrap;
+   }
+
+   .left-middle-card-msg {
+    white-space: normal;
+   }
+
+   .left-card-wrapper img {
+    transform: translateY(1rem);
+   }
+
+   .mutliple-card-container {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    max-width: 100vw;
+    
+   }
+
+   .left-bottom-card {
+    width: 110vw;
+   }
+
+   .left-middle-card {
+    position: absolute;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 85%;
+   }
+
+   .left-top-card {
+    position: absolute;
+    top: -20%;
+    left: 2.2rem;
+    transform: scale(0.9);
+    width: 85%;
+   }
+
+   .left-top-card button {
+    transform: translate(3.5rem);
+   }
+
+  
+
+    /* changing layout for right card */
+    .right-card-wrapper  {
+        position: absolute;
+        left: 0;
+        width: 110vw;
+        height: 40%;
+       
+    
+       }
+    
+       .right-card-wrapper {
+        white-space: nowrap;
+        top: 115vh;
+       }
+
+       .right-card-wrapper img {
+        position: absolute;
+        left: -30%;
+       }
+    
+       
+       .right-middle-card-msg {
+        white-space: normal;
+       }
+    
+       .right-mutliple-card-container {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        max-width: 100vw;
+        
+       }
+    
+       .right-bottom-card {
+        width: 110vw;
+       }
+    
+       .right-middle-card {
+        position: absolute;
+        top: -60%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 85%;
+       }
+    
+       .right-top-card {
+        position: absolute;
+        top: -10%;
+        left: 2.2rem;
+        transform: scale(0.9);
+        width: 85%;
+       }
+    
+       .right-top-card button {
+        transform: translate(-3.5rem);
+       }
+
+       .white-space {
+        display: none;
+       }
+
+        .text-right-wrapper {
+            transform: translateY(-3rem);
+        }
+
+        .reasons-title-wrapper {
+            transform: translateY(95%);
+            white-space: nowrap;
+        }
+
+    .reasons-to-shop {
+        position: relative;
+        top: 179vh;
+        display: grid;
+    }
+
+    .reasons-text-wrapper {
+        grid-template-columns: 1fr;
+        gap: 7rem;
+    }
+
+    .reasons-to-shop i::before {
+        position: relative;
+        top: 0.5rem;
+
+    }
+    .reasons-candy-img-container, .reasons-popcorn-img-container {
+        display: none;
+    }
+
+    /* make footer layout change for mobile */
+    footer {
+        position: absolute;
+        top: 400vh;
+        height: 10vh;
+        padding-bottom: 100rem;
+    }
+
+    .footer-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+    
+    }
+
+    .footer-logo-icons {
+        transform: translate(-6rem, 3rem) scale(0.8);
+    }
+
+    #first-popcorn, #second-popcorn, #third-popcorn  {
+        display: none;
+    }
+
+    .small-text {
+        position: relative;
+        top: calc(100vh - 30rem);
+        text-align: center;
+    }
+
+    .footer-info-wrapper{
+        transform: translateY(-30rem);
+        display: none;
+    }
+
+    .footer-info.mobile {
+        margin-top: 3rem ;
+        margin-left: 1rem;
+    }
+
+    .footer-img {
+        bottom: -20%;
+    }
+
+    .footer-info.mobile {
+        width: 95%;
+        height: 10rem;
+        position: absolute;
+        left: 0;
+        top: 25%;
+        display: grid;
+        place-content: center;
+        height: 50vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 5rem;
+    }
+    
+
+    .footer-shop.mobile {
+        border-top: 1px solid var(--color-2);
+        position: relative;
+
+    }
+
+    .footer-help-container p {
+        margin-bottom: 4rem;
+    }
+
+    .footer-info.mobile div  {
+        width: 90vw;
+        border-bottom: 1px solid var(--color-2);
+        color: var(--color-2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-info.mobile span {
+       transform: scale(2);
+       font-weight: 700;
+       margin: 1rem;
+    }
+
+
+  
+    .footer-content-wrapper .small-text:nth-child(1), 
+    .footer-shop, .footer-about, 
+    .footer-contact {
+        display: none;
+    }
+
+    .footer-info.mobile img {
+        width: 100%;
+        height: 100%;
+        top: 80vh;
+        left: 0;
+    }
+
   }

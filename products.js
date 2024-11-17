@@ -33,6 +33,21 @@ closeCartModal.addEventListener('click', function() {
 
 })
 
+
+overlay.addEventListener('click', function() {
+    cartModal.classList.remove('fadeIn');
+    cartModal.classList.add('fadeOut');
+
+
+    setTimeout(() => {
+         cartModal.classList.add('hidden');
+         overlay.classList.add('hidden');
+         logoList.style.display = 'block';
+    }, 200)
+ 
+})
+
+
 cartIcon.addEventListener('click', function() {
     cartModal.classList.remove('hidden');
     cartModal.classList.add('fadeIn');
@@ -66,13 +81,15 @@ function setupProductGrid(arr) {
         productsDiv.style.backgroundImage = `url(${product.imgSrc[0]})`;
 
         //styling to all the elements in the product grid
-        productsDiv.style.backgroundSize = 'contain';
-        productsDiv.style.backgroundRepeat = 'no-repeat';
-        productsDiv.style.transition = 'all 0.3s ease';
-        productsDiv.style.display = 'flex';
-        productsDiv.style.justifyContent = 'center';
-        productsDiv.style.alignContent = 'center';
-        productsDiv.style.position = 'relative';
+        productsDiv.classList.add('product-div'); // Add the CSS class
+
+        // productsDiv.style.backgroundSize = 'contain';
+        // productsDiv.style.backgroundRepeat = 'no-repeat';
+        // productsDiv.style.transition = 'all 0.3s ease';
+        // productsDiv.style.display = 'flex';
+        // productsDiv.style.justifyContent = 'center';
+        // productsDiv.style.alignContent = 'center';
+        // productsDiv.style.position = 'relative';
 
 
 
