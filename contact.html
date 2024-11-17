@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popcorn Flavors</title>
-    <link rel="stylesheet" href="products.css">
+    <title>Contact Us | Popped Perfection</title>
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="shortcut icon" href="images/mascot-modified.png"  />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,32 +23,61 @@
         </div>
         <nav id="logo-list">
             <ul class="logo-ul">
-                <li><a href="index.html"><img class="logo" src="images/logo.png" alt=""></a></li>
-                
-                    <li><a id="products-page-link" href="products.html">POPCORN FLAVORS</a></li>
+                    <li> <a href="index.html"><img class="logo" src="images/logo.png" alt=""></a></li>          
+                    <li><a id="products-page-link" href="index.html">HOME</a></li>
                     <li>CREATE</li>
                     <li><a href="contact.html">CONTACT US</a></li>
                     <li>LEARN MORE</li>
                 
-                    <li><span id="search-icon" class="material-symbols-outlined">search</span></li>
-                    <li><span id="cart-icon" class="material-symbols-outlined">shopping_cart</span></li>
-                    <li><span id="menu-icon" class="material-symbols-outlined">menu</span></li>
+                    
+                        <li><span id="search-icon" class="material-symbols-outlined">search</span></li>
+                        <li><span id="cart-icon" class="material-symbols-outlined">shopping_cart</span></li>
+                        <li><span id="menu-icon" class="material-symbols-outlined">menu</span></li>
+                  
             </ul>
         </nav>
     </header>
-  
-    <main class="all-content-wrapper">
-        <div class="inner-content-wrapper">
-            <h1>Contact us</h1>
-            <p>example@gmail.com</p>
-            <p>+1 (978) 213-2132</p>
-            <button></button>
-            <div class="btn-mini-div"></div>
-        </div>
+
+    <main>
+        <div class="form-close-btn">&times</div>
+
+        <section class="contact-us-section">
+            <div class="form-default-container" action="#">
+                <h1>Contact us</h1>
+                <h2> <i class="fa-regular fa-envelope"></i> example123@gmail.com</h2>
+                <h2 id="form-number"> <i class="fa-solid fa-phone"></i> +55 (3) 2043 1344</h2>
+                 <button id="get-in-touch">GET IN TOUCH</button>
+                
+                 <form class="form-overlay">
+                <h2>Okay we're all set. Enter your details below</h2>
+                    <input class="form-inputs" type="text" placeholder="Name" >
+                    <span id="name-error" class="error-message"></span>
+
+                    <input class="form-inputs" type="text" placeholder="Email">
+                    <span id="email-error" class="error-message"></span>
+
+                    <input class="form-inputs" type="tel" placeholder="Phone" >
+                    <span id="tel-error" class="error-message"></span>
+
+                    <input class="form-inputs" type="text" placeholder="Comments">
+                    
+                    <button id="submit-form">SEND</button>
+                 </form>
+            </div>
+        </section>
     </main>
 
+
     <footer>
-        <div class="footer-content-wrapper">
+
+        <div class="footer-info mobile">
+            <div class="footer-shop mobile">SHOP <span>&#43;</span></div> 
+            <div class="footer-about mobile">CUSTOMER ASSISTANCE <span>&#43;</span></div> 
+            <div class="footer-contact mobile">ABOUT US <span>&#43;</span></div> 
+            <img id="footer-img" src="images/footer-img.png" alt=""> 
+        </div>
+
+       <div class="footer-content-wrapper">
             <div class="footer-logo-icons">
                 <img src="images/logo.png" alt="Popped Perfection Logo">
                 <div class="footer-socials-wrapper">

@@ -268,38 +268,6 @@ a, a:hover, a:active, a:visited, a:focus {
 
   }
 
-  /* need to do this in from json in js */
-  /* .example { 
-    background-image: url("images/Caramel-product-1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-
-  .example:hover {
-    background-image: url("images/Caramel-product-2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-   
-  }
-
-  #price {
-    position: relative;
-    bottom: -200px;
-  }
-
-  #example-span {
-    position: absolute;
-    bottom: 0;
-    font-size: 16px;
-    font-weight: 600;
-  }
- */
 
  .product-grid div {
     transform: scale(0.8);

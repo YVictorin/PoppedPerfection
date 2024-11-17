@@ -75,6 +75,7 @@ async function getProductData() {
 
 
 function setupProductGrid(arr) {
+   
     arr.forEach((product) => {
         const productsDiv = document.createElement('div');
         productGridElem.appendChild(productsDiv);
@@ -82,16 +83,6 @@ function setupProductGrid(arr) {
 
         //styling to all the elements in the product grid
         productsDiv.classList.add('product-div'); // Add the CSS class
-
-        // productsDiv.style.backgroundSize = 'contain';
-        // productsDiv.style.backgroundRepeat = 'no-repeat';
-        // productsDiv.style.transition = 'all 0.3s ease';
-        // productsDiv.style.display = 'flex';
-        // productsDiv.style.justifyContent = 'center';
-        // productsDiv.style.alignContent = 'center';
-        // productsDiv.style.position = 'relative';
-
-
 
         productsDiv.addEventListener('mouseover', function() {
             productsDiv.style.backgroundImage = `url(${product.imgSrc[1]})`;
@@ -121,12 +112,7 @@ function setupProductGrid(arr) {
 
         productsDiv.appendChild(productInfoContainer);
 
-
-
-
-
     })
-
   
 }
 

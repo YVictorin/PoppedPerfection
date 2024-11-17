@@ -18,16 +18,24 @@ html, body {
     height: 100%;
     font-family: "Open Sans", serif;
     font-size: 12px;
-    background-color: var(--color-3);
+    background-color: var(--color-1);
     overflow-x: hidden;
 
 }
 
+/* Remove dots from all lists */
+ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+
+
 
 .shipping-nav {
     text-align: center;
-    background-color: var(--color-1);
-    color: white;
+    background-color: black;
+    color: var(--color-1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -226,11 +234,149 @@ a, a:hover, a:active, a:visited, a:focus {
 
   /* main page styling */
 main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
     width: 100vw;
-    height: 100vh;
-    display: grid;
-    place-content: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; 
   }
+
+  .form-default-container {
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    transform: translateY(25%);
+    color: white;
+}
+
+.form-default-container h1 {
+    font-size: 3em;
+    margin-bottom: 2rem;
+}
+
+.form-default-container i {
+   margin-right: 1rem;
+}
+
+.form-default-container h2:nth-child(3) i{
+    margin-right: 1rem;
+
+}
+
+.form-default-container h2:nth-child(3) {
+    margin-bottom: 2rem;
+
+}
+
+
+#form-number {
+    transform: translateX(-3rem);
+}
+
+
+div button {
+    transform: translateY(5vh);
+    padding: 1rem;
+    background-color: var(--color-1);
+    border: 2px solid var(--color-2);
+    color: white;
+}
+
+.expand-btn-color {
+    position: relative;
+    background: linear-gradient(to top, var(--color-2) 50%, var(--color-1) 50%); /* Two colors, starting with the bottom color */
+    background-size: 100% 200%; /* Double the height to prepare for the transition */
+    background-position: 0 100%; /* Start with the bottom color visible */
+    transform: translateY(5vh);
+    padding: 1rem;
+    background-color: var(--color-1);
+    border: 2px solid var(--color-2);
+    color: white;
+    cursor: pointer;
+    transition: background-position 0.5s ease-in-out; /* Smooth transition */
+
+  }
+
+  .expand-btn-color-clicked {
+    background-position: 0 0; /* Final position for the transition */
+    transition: background-position 0.5s ease-in-out;
+    background-color: #292928;
+}
+
+
+
+.form-overlay {
+   width: 2000px;
+   height: 2000px;
+   padding: 40rem;
+   display: grid;
+   place-content: center;
+   gap: 2rem;
+   padding: 2rem;
+   background-color: #292928;
+   position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    display: none;
+
+}
+
+.form-overlay * {
+    transform: scale(0.8);
+}
+
+.form-close-btn {
+    transform: scale(4);
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    color: white;
+    z-index: 1000;
+    display: none;
+}
+
+.form-overlay h2 {
+    text-align: left;
+}
+
+.form-overlay input {
+    height: 4rem;
+    padding: 1rem;
+    background-color: #292929;
+    color: white;
+    border: 3px solid white;
+    border-radius: 3px;
+}
+
+.form-overlay button {
+    width: 10rem;
+    position: absolute;
+    bottom: 38%;
+    right: 42%;
+    background-color: #292928;
+    border: 2px solid var(--color-2);
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    border: 3px solid var(--color-2);
+    transition: all 0.1s ease-in;
+}
+
+
+
+
+
+
+
+
+
 
 /* styling for the footer */
 
@@ -350,9 +496,234 @@ footer {
 
 
 
-/* responsiveness for phones */
-  @media(width <= 1100px) {
+/* slight changes for certain desktop sizes */
+@media(width <= 1100px) {
     .modal-cart {
         width: 30vw;
     }
   }
+
+  /* responsiveness for mobile and small tablets*/
+ @media (max-width: 500px), (max-width: 769px) {
+    body, html {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+        min-height: -webkit-fill-available; /*makes vh units actually work on mobile*/
+
+    }
+
+     /* navbar and hero image styling for mobile */
+     .hero-img {
+        width: 100vw;
+    }
+ 
+    .logo-ul-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+    }
+
+    #logo-list {
+        transform: scale(0.5) translate(-50%, -50%);
+        position: relative;
+        top: 50%;
+        left: 50%;
+    }
+
+   
+
+
+
+    .shipping-nav {
+        white-space: nowrap;
+        font-size: 5px;
+    }
+
+    .shipping-nav .nav-info span {
+        transform: scale(0.7);
+    }
+    .logo-ul {
+        width: 100vw;
+    }
+
+   
+
+    .logo-ul li a, .logo-ul li {
+    transform: translate(3rem);
+    }
+
+    .nav-info {
+        font-size: 0.5rem;
+    }
+
+    .shipping-nav {
+        font-size: 0.5rem;
+    }
+
+    .logo {
+       transform: translateX(-42rem) scale(0.5);
+    }
+
+    #search-icon, #cart-icon, #menu-icon {
+        transform: translate(-2rem);
+    }
+
+    .hero-img {
+        height: 100vh;
+    }
+
+
+    .modal-cart {
+        height: 500vh;
+        width: 100vw;
+        position: relative;
+        top: -12%;
+        left: 35%
+    }
+
+    .modal-cart .close-modal {
+        position: relative;
+         width: 100px;
+        bottom: 8rem;
+        transform: translateX(-5rem);
+    } 
+
+
+    
+
+
+     /* make footer layout change for mobile */
+     footer {
+        position: absolute;
+        top: 100vh;
+        height: 10vh;
+        padding-bottom: 100rem;
+       
+    }
+
+    .footer-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+    
+    }
+
+    .footer-logo-icons {
+        transform: translate(-6rem, 3rem) scale(0.8);
+    }
+
+    #first-popcorn, #second-popcorn, #third-popcorn  {
+        display: none;
+    }
+
+    .small-text {
+        position: relative;
+        top: calc(100vh - 30rem);
+        text-align: center;
+    }
+
+    .footer-info-wrapper{
+        transform: translateY(-30rem);
+        display: none;
+    }
+
+    .footer-info.mobile {
+        margin-top: 3rem ;
+        margin-left: 1rem;
+    }
+
+    .footer-img {
+        bottom: -20%;
+    }
+
+    .footer-info.mobile {
+        width: 95%;
+        height: 10rem;
+        position: absolute;
+        left: 0;
+        top: 25%;
+        display: grid;
+        place-content: center;
+        height: 50vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 5rem;
+    }
+    
+    .footer-shop, .footer-about, .footer-contact {
+        display: none;
+    }
+
+    .footer-shop.mobile {
+        border-top: 1px solid var(--color-2);
+        position: relative;
+    }
+
+    .footer-help-container p {
+        margin-bottom: 4rem;
+    }
+
+    .footer-info.mobile div  {
+        width: 90vw;
+        border-bottom: 1px solid var(--color-2);
+        color: var(--color-2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-info.mobile span {
+       transform: scale(2);
+       font-weight: 700;
+       margin: 1rem;
+    }
+
+  
+
+
+    .footer-info.mobile img {
+        width: 100%;
+        height: 100%;
+        top: 80vh;
+        left: 0;
+    }
+
+ }
+/* responsiveness for desktop */
+ @media(min-width: 1000px) {
+
+    footer {
+        top: 125vh;
+    }
+
+    .footer-info.mobile {
+        display: none;
+    }
+    .contact-us-section {
+        transform: scale(1.5) translateY(15%);
+    }
+
+    .form-overlay {
+        width: 100vw ;
+        height: 150vh;
+        position: absolute;
+        top: -150vh;
+    }
+
+    .form-overlay button {
+        transform: translateY(200%) translateX(17%);
+        height: 3rem;
+        display: grid;
+        place-content: center;
+    }
+
+    .form-close-btn {
+        top: -10vh;
+    }
+ }
