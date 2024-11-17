@@ -542,10 +542,9 @@ footer {
     }
 
     .logo {
-        transform: scale(0.5);
-        position: relative;
-        left: -7rem;
+       display: none;
     }
+
 
     footer {
         position: absolute;
@@ -562,7 +561,7 @@ footer {
         position: relative;
         top: 54vh;
     }
-    
+
     .footer-content-wrapper {
         display: grid;
         grid-template-columns: 1fr;
@@ -702,7 +701,6 @@ footer {
     }
     .logo-ul {
         width: 100vw;
-        margin-left: 1rem;
     }
 
    
