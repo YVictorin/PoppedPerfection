@@ -758,7 +758,7 @@ footer {
 
  
   /* responsiveness for large tablets */
-  @media (max-width: 1024px) {
+  @media (max-width: 1024px) and (min-width: 769px) {
     .footer-about, .footer-shop, .footer-contact {
      display: none;
     }
@@ -1307,7 +1307,7 @@ footer {
     /* make footer layout change for mobile */
     footer {
         position: absolute;
-        top: 400vh;
+        top: 500vh;
         height: 10vh;
         padding-bottom: 100rem;
     }
